@@ -1,0 +1,18 @@
+   RewriteEngine on
+   RewriteBase /cgs
+   # Use this line only if a script cares about the identity of the client:
+   SSLOptions +OptRenegotiate +StdEnvVars
+   # Otherwise, comment out the previous line and uncomment the following line:
+   # SSLOptions +OptRenegotiate
+   SSLVerifyClient require
+   SSLVerifyDepth 3
+   SSLRequire %{SSL_CLIENT_S_DN_O} == "MIT Computer Science & Artificial Intelligence Laboratory"
+   RewriteCond          %{HTTPS} !=on
+   RewriteRule          (.*) https://groups.csail.mit.edu/cgs/$1
+   AddHandler cgi-script .py
+   Options +ExecCGI
+
+   Order allow,deny
+   <Files ~ "\.(py|html|htm|txt)$">
+       allow from all
+   </Files>
