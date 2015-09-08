@@ -20,7 +20,7 @@ site).
 Access to files in the `slides` subdirectory is done by using
 `get.py`, for instance:
 
-[https://groups.csail.mit.edu/cgs/slides/get.py?file=matted_computing_3_2015.pdf](https://groups.csail.mit.edu/cgs/slides/get.py?file=matted_computing_3_2015.pdf)
+[https://groups.csail.mit.edu/cgs/slides/get.py?file=20150311_Matt.pdf](https://groups.csail.mit.edu/cgs/slides/get.py?file=20150311_Matt.pdf)
 
 Remember to lock down AFS so that other users can't see the files.
 You need to have permissions for a group to write there (`cgs` for us)
